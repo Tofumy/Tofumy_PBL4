@@ -35,4 +35,61 @@ Installed NodeJS
 
 To install the MongoDB, we run the below:
 
-``
+`sudo apt install -y mongodb`
+
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+
+
+Started the mongodb server using the below:
+
+`sudo service mongodb start`
+
+We then verified if the service is up and running:
+
+`sudo systemctl status mongodb`
+
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+
+
+Installed a node package manager
+
+`sudo apt install -y npm`
+
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+
+Installed a 'body-parser' package to help process JSON files passed in requests to server
+
+`sudo npm install body-parser`
+
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+
+Created a folder named ‘Books’
+
+`mkdir Books && cd Books`
+
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+
+
+In the Books directory, an npm project was initialized
+
+`npm init`
+
+Added a file to the directory 'server.js'
+
+`vi server.js`
+
+Below is the code added to the file
+
+```
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
+require('./apps/routes')(app);
+app.set('port', 3300);
+app.listen(app.get('port'), function() {
+    console.log('Server up: http://localhost:' + app.get('port'));
+});
+
+```
