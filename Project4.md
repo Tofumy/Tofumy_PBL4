@@ -37,7 +37,7 @@ To install the MongoDB, we run the below:
 
 `sudo apt install -y mongodb`
 
-[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-install-mongodb.png)
 
 
 Started the mongodb server using the below:
@@ -48,31 +48,33 @@ We then verified if the service is up and running:
 
 `sudo systemctl status mongodb`
 
-[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-service-mongodb-start-status.png)
 
 
 Installed a node package manager
 
 `sudo apt install -y npm`
 
-[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-install-npm.png)
 
 Installed a 'body-parser' package to help process JSON files passed in requests to server
 
 `sudo npm install body-parser`
 
-[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-npm-install-body-parser.png)
 
 Created a folder named ‘Books’
 
 `mkdir Books && cd Books`
 
-[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-apt-key-adv.png)
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/mkdir-books.png)
 
 
 In the Books directory, an npm project was initialized
 
 `npm init`
+
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/npm-init.png)
 
 Added a file to the directory 'server.js'
 
@@ -80,7 +82,8 @@ Added a file to the directory 'server.js'
 
 Below is the code added to the file
 
-```
+``` javascript
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
@@ -93,3 +96,5 @@ app.listen(app.get('port'), function() {
 });
 
 ```
+
+[screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/server.js.png)
