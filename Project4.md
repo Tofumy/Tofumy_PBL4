@@ -7,7 +7,7 @@ The below cmdlet update ubuntu
 
 `$ sudo apt update`
 
-![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/Sudo update.JPG)
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/"Sudo update".JPG)
 
 
 The below cmdlet will update Ubuntu
