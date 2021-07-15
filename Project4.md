@@ -98,3 +98,79 @@ app.listen(app.get('port'), function() {
 ```
 
 ![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/server.js.png)
+
+
+
+**Step 3** Install Express and Set up Routes to the server
+
+We installed the mongoose package for express framework
+
+`sudo npm install express mongoose`
+
+
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/server.js.png)
+
+We created a folder "apps" and in the folder, we created a file "routes.js"
+
+`mkdir apps && cd apps`
+
+`vi routes.js`
+
+We added the below code to the 'routes.js' file
+
+``` javascript
+
+var Book = require('./models/book');
+module.exports = function(app) {
+  app.get('/book', function(req, res) {
+    Book.find({}, function(err, result) {
+      if ( err ) throw err;
+      res.json(result);
+    });
+  }); 
+  app.post('/book', function(req, res) {
+    var book = new Book( {
+      name:req.body.name,
+      isbn:req.body.isbn,
+      author:req.body.author,
+      pages:req.body.pages
+    });
+    book.save(function(err, result) {
+      if ( err ) throw err;
+      res.json( {
+        message:"Successfully added book",
+        book:result
+      });
+    });
+  });
+  app.delete("/book/:isbn", function(req, res) {
+    Book.findOneAndRemove(req.query, function(err, result) {
+      if ( err ) throw err;
+      res.json( {
+        message: "Successfully deleted the book",
+        book: result
+      });
+    });
+  });
+  var path = require('path');
+  app.get('*', function(req, res) {
+    res.sendfile(path.join(__dirname + '/public', 'index.html'));
+  });
+};
+
+```
+
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/server.js.png)
+
+
+We created another folder 'models' in the 'apps' folder and created a file called 'book.js'
+
+`mkdir models && cd models`
+
+`vi book.js`
+
+We pasted the below code in the 'book.js' file
+
+
+
+
