@@ -108,7 +108,7 @@ We installed the mongoose package for express framework
 `sudo npm install express mongoose`
 
 
-![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/server.js.png)
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/sudo-npm-install-mongoose.png)
 
 We created a folder "apps" and in the folder, we created a file "routes.js"
 
@@ -160,7 +160,7 @@ module.exports = function(app) {
 
 ```
 
-![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/server.js.png)
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/routes.js.png)
 
 
 We created another folder 'models' in the 'apps' folder and created a file called 'book.js'
@@ -170,6 +170,82 @@ We created another folder 'models' in the 'apps' folder and created a file calle
 `vi book.js`
 
 We pasted the below code in the 'book.js' file
+
+``` javascript
+
+```
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/book.js.png)
+
+
+
+**Step 4** - Access the routes with AngularJS
+
+We changed to the 'Books' directory
+
+`cd ../..`
+
+Then created a folder 'public'
+
+`mkdir public && cd public`
+
+Created a file 'script.js'
+
+`vi script.js`
+
+then copied and pasted the below code in the 'script.js'
+
+``` javascript
+
+
+```
+
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/script.js.png)
+
+
+We then created an 'index.html' in the 'public' directory
+
+`vi index.html`
+
+Then pasted the below code:
+
+``` html
+
+```
+
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/index.html.png)
+
+
+Changed the directory back to the 'books' directory
+
+`cd ..`
+
+Started the node server
+
+`node server.js`
+
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/node-server.js.png)
+
+We created a custom TCP Port 3300 in the security group of the AWS EC2 instance
+
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/security-inbound-rule.png)
+
+
+We did a test to see what the server returns locally:
+
+`curl -s http://localhost:3300`
+
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/curl-localhost.png)
+
+
+We tried to access the app on the browser and it works fine
+
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/book-register.png)
+
+
+
+
+
+
 
 
 
