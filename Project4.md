@@ -330,7 +330,7 @@ Started the node server
 
 We created a custom TCP Port 3300 in the security group of the AWS EC2 instance
 
-![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/security-inbound-rule.png)
+![screenshot](https://github.com/Tofumy/Tofumy_PBL4/blob/main/security-inboundrule.png)
 
 
 We did a test to see what the server returns locally:
